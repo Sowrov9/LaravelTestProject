@@ -6,8 +6,24 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Role Index</h1>
-    <h1>Role Crud</h1>
-    <h1>Updated from Github Remote.</h1>
+    @if (session('S'))
+        <h1>{{session('S')}}</h1>
+    @endif
+    <h1>Roles List</h1>
+    <br><br>
+    <table border="1" style="border-collapse:collapse">
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Role</th>
+        </tr>
+        @foreach ($roles as $role )
+            <tr>
+                <td>{{$role["id"]}}</td>
+                <td>{{$role["name"]}}</td>
+                <td>{{$role["role"]}}</td>
+            </tr>
+        @endforeach
+    </table>
 </body>
 </html>

@@ -49,4 +49,5 @@ Route::get("userlist",function(){
 
 Route::get("/role",[RoleController::class,"index"]);
 Route::get("/role/create",[RoleController::class,"create"]);
+Route::post("/role/store",[RoleController::class,"store"]);
 Route::get("/role/update",[RoleController::class,"update"]);
