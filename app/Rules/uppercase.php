@@ -37,4 +37,8 @@ class uppercase implements Rule
     {
         return 'The validation error message.';
     }
+
+    function rana(){
+        
+    }
 }
