@@ -9,7 +9,7 @@
 </head>
 <body>
     <div class="container mt-5">
-        <h1 class="text-center mb-4">Customers List</h1>
+        <h1 class="text-center mb-4">Customers Lists</h1>
         <div class="table-responsive">
             <table class="table table-bordered table-striped">
                 <thead class="table-dark">
