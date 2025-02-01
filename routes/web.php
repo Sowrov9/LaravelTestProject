@@ -1,6 +1,8 @@
 <?php
 
+use App\Http\Controllers\CustomerController;
 use App\Http\Controllers\RoleController;
+use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -18,9 +20,9 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get("/user/{id?}", function($id){
-    echo "The id is {$id}";
-});
+// Route::get("/user/{id?}", function($id){
+//     echo "The id is {$id}";
+// });
 Route::get("/v/{name?}/{age?}",function($name,$age){
     echo "My name is $name. I'm $age years old.";
 });
@@ -51,3 +53,12 @@ Route::get("/role",[RoleController::class,"index"]);
 Route::get("/role/create",[RoleController::class,"create"]);
 Route::post("/role/store",[RoleController::class,"store"]);
 Route::get("/role/update",[RoleController::class,"update"]);
+
+// Route::get("/customer/{name}/{place}",[CustomerController::class,"index"]);
+Route::get("/customer",[CustomerController::class,"index"]);
+Route::get("/customer/create",[CustomerController::class,"create"]);
+
+
+Route::get("/user",[UserController::class,"index"]);
+Route::get("/user/create",[UserController::class,"create"]);
+Route::post("/user/store",[UserController::class,"store"]);
